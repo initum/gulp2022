@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Youtube",
+    "link": "#",
+    "img": "img/youtube.png"
+  },
+  {
+    "name": "VK",
+    "link": "#",
+    "img": "img/vk.png"
+  },
+  {
+    "name": "Instagram",
+    "link": "#",
+    "img": "img/instagram.png"
+  },
+  {
+    "name": "Telegram",
+    "link": "#",
+    "img": "img/telegram.png"
+  },
+  {
+    "name": "Patreon",
+    "link": "#",
+    "img": "img/patreon.png"
+  }
+]

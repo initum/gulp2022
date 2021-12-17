@@ -1,0 +1,36 @@
+$base-font-size: 22px;
+$base-font-family: Verdana;
+$base-line-height: 1.2;
+
+@mixin ph {
+  @media (max-width: 700px) {
+    @content;
+  }
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {  
+  font-size: $base-font-size;
+  font-family: $base-font-family;
+  line-height: $base-line-height;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../img/bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include ph {
+    color: #fff;
+    background: #000;
+  }
+}
+
+
+@import 'block/*.scss';
