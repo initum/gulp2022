@@ -1,4 +1,9 @@
 # gulp2022
 
-#npm start - режим разработки
-#npm run build - режим сборки
+
+# npm install - установка
+# npm start - режим разработки
+# npm run build - режим сборки
+
+
+
