@@ -12,14 +12,17 @@ const gp = loadPlugins();
 
 // Обработка JavaScript
 export default () => {
-  return gulp.src(path.js.src, { sourcemaps: app.isDev })
-    .pipe(gp.plumber({
-      errorHandler: gp.notify.onError(error => ({
-        title: 'JavaScript',
-        message: error.message
-      }))
-    }))
-    .pipe(gp.babel(app.babel))
-    .pipe(webpackStream(app.webpack))
-    .pipe(gulp.dest(path.js.dest, { sourcemaps: app.isDev }));
+	return gulp.src(path.js.src, { sourcemaps: app.isDev })
+		.pipe(gp.plumber({
+			errorHandler: gp.notify.onError(error => ({
+			title: 'JavaScript',
+			message: error.message
+			}))
+		}))
+		.pipe(gp.babel(app.babel))
+		.pipe(webpackStream(app.webpack))
+		.pipe(gp.replace('./src/', '/'))
+		.pipe(gp.replace('../', '/'))
+		.pipe(gp.replace('./', '/'))
+		.pipe(gulp.dest(path.js.dest, { sourcemaps: app.isDev }));
 }

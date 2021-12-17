@@ -11,14 +11,17 @@ const gp = loadPlugins();
 
 // Обработка Pug
 export default () => {
-  return gulp.src(path.pug.src)
-    .pipe(gp.plumber({
-      errorHandler: gp.notify.onError(error => ({
-        title: 'Pug',
-        message: error.message
-      }))
-    }))
-    .pipe(gp.pug(app.pug))
-    .pipe(gp.webpHtml())
-    .pipe(gulp.dest(path.pug.dest));
+	return gulp.src(path.pug.src)
+		.pipe(gp.plumber({
+			errorHandler: gp.notify.onError(error => ({
+			title: 'Pug',
+			message: error.message
+			}))
+		}))
+		.pipe(gp.pug(app.pug))
+		.pipe(gp.webpHtml())
+		.pipe(gp.replace('./src/', '/'))
+		.pipe(gp.replace('../', '/'))
+		.pipe(gp.replace('./', '/'))
+		.pipe(gulp.dest(path.pug.dest));
 }
