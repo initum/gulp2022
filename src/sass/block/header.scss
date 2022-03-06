@@ -1,0 +1,30 @@
+.header {
+	display: grid;
+	grid-template-columns: 45% 40% 15%;
+	align-items: center;
+}
+
+.msg {
+	display: flex;
+	justify-content:end;
+	align-items: center;
+	margin-left: 40px;
+
+
+}
+.msg__item {
+	list-style: none;
+	cursor: pointer;
+	margin-left: 20px;
+}
+.burger {
+	display: flex;
+	justify-content: end;
+}
+.tel {
+	font-family: 'Mont-Regular', sans-serif;
+	font-weight: 600;
+	font-size: 36px;
+	color: #838383;
+
+}

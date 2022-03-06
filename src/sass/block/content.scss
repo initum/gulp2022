@@ -1,0 +1,139 @@
+.content {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	grid-template-rows: 1fr;
+	margin-top: 100px;
+	grid-gap: 20px;
+
+	&__items {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: repeat(2, 240px);
+		padding: 0;
+		grid-gap: 12px 28px;
+		:nth-child(2) {
+			background-color: #c7e8ff;
+			margin-top: 15px;
+		}
+		:nth-child(3) {
+			background-color: #ffd7a8;
+		}
+		:nth-child(4) {
+			background-color: #ddbeff;
+			margin-top: 15px;
+		}
+	}
+
+	&__item {
+		display: block;
+		width: 225px;
+		height: 225px;
+		background-color: #ffdb6a;
+		box-shadow: 0px 0px 18px 5px rgba(0, 0, 0, 0.1);
+		border-radius: 28px;
+		padding: 0 22px;
+		:nth-child(2) {
+			background-color: none;
+		}
+	}
+}
+.container {
+}
+.name__item {
+	display: block;
+	margin-top: 45px;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 20px;
+}
+
+.text__item {
+	display: block;
+	background-color: none;
+	margin-top: 20px;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 20px;
+
+	color: #848484;
+}
+.content {
+	&__items-right {
+		margin-left: 150px;
+		max-width: 506px;
+	}
+}
+.intro {
+	&_text {
+		font-style: normal;
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 23px;
+		color: #333333;
+		text-transform: uppercase;
+		margin-bottom: 74px;
+	}
+}
+.heading {
+	&_text {
+		font-family: "Mont-Black", sans-serif;
+		font-weight: 900;
+		font-size: 18px;
+		color: #333333;
+		margin: 0 auto;
+		line-height: 31px;
+		margin-bottom: 74px;
+	}
+}
+.offers {
+	display: flex;
+	justify-content: space-between;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.offer_item {
+	margin-bottom: 74px;
+}
+.title {
+	font-family: "Mont-Bold", sans-serif;
+	font-style: normal;
+	font-weight: 800;
+	font-size: 18px;
+	line-height: 23px;
+	color: #333333;
+	padding: 0;
+	margin: 0;
+}
+.desc {
+	padding: 0;
+	margin: 0;
+}
+.btn_offer {
+	display: block;
+	text-align: center;
+}
+.btn {
+	width: 343px;
+	font-family: "Mont_regular", sans-serif;
+	height: 42px;
+	background: #b776ff;
+	box-shadow: 0px 0px 18px 5px rgba(0, 0, 0, 0.2);
+	border-radius: 21px;
+	outline: none;
+	border: none;
+	text-decoration: none;
+	color: #fff;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 83.8%;
+	cursor: pointer;
+	transition: all 0.2s;
+	&:hover {
+		background: #a256f8;
+	}
+}
+.yellow {
+	color: #ffdb6a;
+}

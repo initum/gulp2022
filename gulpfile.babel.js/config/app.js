@@ -11,13 +11,6 @@ export default {
     collapseWhitespace: isProd
   },
 
-  pug: {
-    data: {
-      social: social
-    },
-    pretty: isDev
-  },
-
   babel: {
     presets: [
       "@babel/preset-env"
