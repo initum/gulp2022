@@ -10,14 +10,18 @@
 </head>
 
 <body>
+
   <div class="container">
+	@@include("chunk/header.html")
     <h1 class="title">Gulp-starter</h1>
     <p class="subtitle">2022</p>
 
     <ul class="social">
+	
       @@loop("chunk/social-item.html", "../../gulpfile.babel.js/data/social.json")
+    
     </ul>
-
+	 @@include("chunk/footer.html")
   </div>
 </body>
 
