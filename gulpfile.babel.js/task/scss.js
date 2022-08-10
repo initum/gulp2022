@@ -22,7 +22,9 @@ export default () => {
 			}))
 		}))
 		.pipe(gp.sassGlob())
-		.pipe(sass())
+		.pipe(sass({
+			includePaths: require('node-normalize-scss').includePaths
+		}))
 		.pipe(gp.webpCss())
 		.pipe(gp.autoprefixer())
 		.pipe(gp.shorthand())
